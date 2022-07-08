@@ -1,7 +1,7 @@
 <?php
 
 // Base URL of the website, without trailing slash.
-$base_url = 'https://notes.orga.cat';
+$base_url = 'http://sj.orz.us';
 
 // Path to the directory to save the notes in, without trailing slash.
 // Should be outside of the document root, if possible.
@@ -16,8 +16,8 @@ header('Expires: 0');
 if (!isset($_GET['note']) || !preg_match('/^[a-zA-Z0-9_-]+$/', $_GET['note']) || strlen($_GET['note']) > 64) {
 
     // Generate a name with 5 random unambiguous characters. Redirect to it.
-    header("Location: $base_url/" . substr(str_shuffle('234579abcdefghjkmnpqrstwxyz'), -5));
-    die;
+    //header("Location: $base_url/" . substr(str_shuffle('234579abcdefghjkmnpqrstwxyz'), -5));
+    //die;
 }
 
 $path = $save_path . '/' . $_GET['note'];
